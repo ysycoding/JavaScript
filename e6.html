@@ -1,0 +1,67 @@
+<!--마우스 포인터를 올렸을때 mouseover
+    마우스 포인터를 뗐을때 mouseout
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>onmouseover event</title>
+<script>
+    window.onload = function(){
+        var target = document.getElementsByTagName('p')[0];
+        target.addEventListener('mouseover', function(){
+            target.style.color = "pink";
+        });
+
+        target.addEventListener('mouseout', function(){
+            target.style.color = "black";
+        });
+    };
+</script>
+</head>
+<body>
+    <p>here</p>
+</body>
+</html>-->
+
+<!--마우스 버튼을 누른상태에서 mousedown
+    마우스 버튼을 떼면 mouseup-
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>onmouseover event</title>
+<script>
+    window.onload = function(){
+        var target = document.getElementsByTagName('p')[0];
+        target.addEventListener('mousedown', function(){
+            target.style.color = "pink";
+        });
+
+        target.addEventListener('mouseup', function(){
+            target.style.color = "black";
+        });
+    };
+</script>
+</head>
+<body>
+    <p>here</p>
+</body>
+</html>-->
+
+<!--inline 방식-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>onmouse event</title>
+</head>
+<body>
+    <p
+    onMouseover="this.style.color='red';"
+    onMouseout="this.style.color='black';"
+    onMousedown="this.style.color='yellow';"
+    onMouseup="this.style.color='pink';" >
+        here
+    </p>
+</body>
+</html>
