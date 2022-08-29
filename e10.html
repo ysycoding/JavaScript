@@ -1,0 +1,85 @@
+<!--태그에 속성을 추가하는 방법
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>attribute</title>
+<script>
+window.onload = function(){
+    var target = document.getElementsByTagName('p')[0];
+    target.setAttribute('class','hi');
+};
+</script>
+</head>
+<body>
+    <p>here</p>
+</body>
+</html>-->
+
+
+<!--속성의 값을 가져오는 방
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>style</title>
+<script>
+window.onload = function(){
+    var target = document.getElementsByTagName('input')[0];
+    var attrValue = target.getAttribute('type');
+    console.log('attrValue is ' + attrValue);
+};
+</script>
+</head>
+<body>
+    <input type="button" />
+</body>
+</html>
+-->
+
+<!-- 속성을 제거하는 방법
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>style</title>
+<script>
+window.onload = function(){
+    var target = document.getElementsByTagName('input')[0];
+    var attrValue = target.getAttribute('type');
+
+    if(attrValue == "button"){
+        target.removeAttribute('type');
+    }
+};
+</script>
+</head>
+<body>
+    <input type="button" />
+
+
+</body>
+</html>-->
+
+<!--속성 유무 파악하기-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>style</title>
+<script>
+window.onload = function(){
+    var target = document.getElementsByTagName('input')[0];
+    var attr = target.hasAttribute('type');
+
+    if(attr === false){
+        target.setAttribute('type','button');
+        target.setAttribute('value',"Button");
+    }
+};
+</script>
+</head>
+<body>
+    <input />
+</body>
+</html>
