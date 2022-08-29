@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>자바스크립트</title>
+<script>
+    function make(){
+        this.name;
+        this.company;
+        this.color;
+        this.numPeople;
+        this.meth = show;
+    }
+    function show(){
+        document.write("이름 : "+this.name+"<br />");
+        document.write("회사 : "+this.company+"<br />");
+        document.write("인원 : "+this.numPeople +"<br />");
+        document.write("색상 : "+ this.color +"<br />");
+    }
+    r = new make();
+    r .name="sy";
+    r.company = "sk";
+    r.color = "pink";
+    r.numPeople = 2;
+    r.meth();
+</script>
+</head>
+<body>
+</body>
+</html>
