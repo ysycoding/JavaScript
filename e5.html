@@ -1,17 +1,32 @@
+<!--inline 방식
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
-<title>JavaScript</title>
+<title>JavaScript - click event</title>
+</head>
+<body>
+    <p onClick="alert('Hi');">click here</p>
+</body>
+</body>
+</html>-->
+
+<!--script 태그에서 클릭이벤트 발생시키기-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>pinkcoding - JavaScript - click event</title>
 <script>
     window.onload = function(){
-        document.getElementsByClassName('dog')[1].innerText = "웰시코기"
-    }
+        var target = document.getElementsByTagName('p')[0];
+        target.addEventListener('click', function(){
+            alert('Hi');
+        });
+    };
 </script>
 </head>
 <body>
-    <p class="dog">말티즈</p>
-    <p class="dog">리트리버</p>
-    <p class="dog">푸들</p>
+    <p>click here</p>
 </body>
 </html>
